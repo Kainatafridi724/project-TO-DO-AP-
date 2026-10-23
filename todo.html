@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO-DO list</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" style=" width: 100%; height: 100vh; display: flex;justify-content: center;">
+<img style="width: 100%; height: 60rem; display: block; position: absolute; top: 0%;left: 0%;object-fit: cover;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgLG3tLv6ytcHp-79Xz62mRaSj1frLbiZnxzsmIE5HPA&s=10" alt="">
+  
+  <section class="box" style="background-color: rgb(253, 211, 218)
+  ; width: 250px; margin:10px auto 0 auto ; ;height: 270px;justify-content: center; display: block ; 
+  text-align: center; z-index: 2; box-shadow: 0 4px 15px rgba(0,0,0,0,0.2);padding:10px ; border-radius: 5px;"  >
+
+<h1><u>To-Do List</u></h1>
+   <div>
+     <input type="text" id="display" style="border-radius: 20px; width: 200px;border: 2px solid; height: 20px;" onkeydown="pressEnter(event)">
+       </div>
+       <div style="padding: 20px; display: flex; justify-content: center;">
+     <button onclick="onClick()" id=""
+        style="background-color: rgb(158, 70, 241); border-radius: 20px; align-items: center; border: 1px white; width: 100px; height: 40px; font-size: larger; color: white;">add</button>
+
+      
+    <ul class="list" style="list-style: none; padding: 0%; margin: 0%;"></ul>
+  </section>
+</div>
+</body> 
+
+
+<script src="app.js" type="module"></script>
+<script type="module" src="fs"></script>
+
+</html>

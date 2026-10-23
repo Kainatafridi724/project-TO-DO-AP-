@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TO-DO list</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="container" style="position: relative; width: 100%; height: 100vh;">
-<img style="width: 100%; height: 700px; display: block; position: absolute; top: 0%;left: 0%;object-fit: cover;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgLG3tLv6ytcHp-79Xz62mRaSj1frLbiZnxzsmIE5HPA&s=10" alt="">
-  
-  <section class="box" style="background-color: rgb(253, 211, 218)
-  ; width: 290px; margin:10px auto 0 auto ; ;height: 200px;justify-content: center; display: block ;position: relative; 
-  text-align: center; z-index: 2; box-shadow: 0 4px 15px rgba(0,0,0,0,0.2);padding:10px ; border-radius: 5px;"  >
+<body style="display: flex;justify-content: center;background-color: black;">
+      <div class="container" style=" width: 100%; height: 150%; display: flex;justify-content: center;">
+<img
+    class="hero-img" style="height: 60rem;"
+    src="https://i.pinimg.com/736x/88/ca/1b/88ca1bee5e0fe7c5690c2f2e7cfc343b.jpg"
+    alt="Mehndi Design"
+>
 
-<h1><u>To-Do List</u></h1>
-   <div>
-     <input type="text" id="display" style="border-radius: 20px; width: 250px;border: 2px solid; height: 20px;" onkeydown="pressEnter(event)">
-       </div>
-       <div style="padding: 20px;">
-     <button onclick="onClick()"
-        style="background-color: rgb(158, 70, 241); border-radius: 20px; border: 1px white; width: 100px; height: 40px; font-size: larger; color: white;">add</button>
+<div class="box">
+       
+    <h1   style="color: white;font-size: 50px;" >Signup</h1>
+<div style="border-radius:20px ; color: black; padding: 10px;">
+            <label for="">Nmae</label>
+            <input  style="font-size: 25px;border-radius:10px ;" type="text" id="name">
+        </div>
+        <div style="border-radius:20px ; color: black; padding: 10px;">
+            <label for="">Email</label>
+            <input  style="font-size: 25px;border-radius:10px ;" type="text" id="email">
+        </div>
+        <div style="border-radius:20px ; color: black;">
+            <label for="">Password</label>
+            <input  style="font-size: 25px;border-radius:10px ;" type="password" id="pswod">
+        </div>
+        <div style="border-radius:20px ; color: black; padding: 20px;">
+        <button style="background-color:red;font-size: 20px; 
+        border-radius:20px ;border: 2px solid white; color:white;" id="signupBtn">Signup</button>
+        <button style="background-color:blue;border-radius:20px ;font-size: 20px;border:
+         2px solid white; color: white;">Login</button>
+     </div>
+    
+    </div>
+ </div>
+</body>
 
-      <button onclick="onSubmit(this)"
-        style="background-color: red; border-radius: 20px; border: 1px white; width: 100px; height: 40px; font-size: larger; color: white;">delete</button>
-  </div>
-    <ul class="list" style="list-style: none; padding: 0%; margin: 0%;"></ul>
-  </section>
-</div>
-</body> 
-
-
-<script src="app.js"></script>
-
+<script src="./sing.js" type="module"></script>
+<script type="module" src="fbcon.js"></script>
+<script type="module" src="app.js"></script>
 </html>

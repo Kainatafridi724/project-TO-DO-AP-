@@ -1,67 +1,58 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAeNR3fAnXK4X5F3EWzd5xVI5BtO0f1F1g",
-    authDomain: "shopping-app-c5e68.firebaseapp.com",
-    projectId: "shopping-app-c5e68",
-    storageBucket: "shopping-app-c5e68.firebasestorage.app",
-    messagingSenderId: "870940409337",
-    appId: "1:870940409337:web:d80dea49602145fe549128",
-    measurementId: "G-NGJ7MSDGYW"
+  apiKey: "AIzaSyBu-UtI6uGT-PKnsUisjVYEl-cKDnOW5_Y",
+  authDomain: "todo-edbbd.firebaseapp.com",
+  databaseURL: "https://todo-edbbd-default-rtdb.firebaseio.com",
+  projectId: "todo-edbbd",
+  storageBucket: "todo-edbbd.firebasestorage.app",
+  messagingSenderId: "691137613008",
+  appId: "1:691137613008:web:d04011791207c0c81162d5",
+  measurementId: "G-FLVFVX48X4"
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-var email=document.getElementById("email");
-var pswod=document.getElementById("pswod");
-var signupBtn=document.getElementById("signupBtn");
-var loginBtn=document.getElementById("loginBtn");
-  const auth = getAuth(app);
-signupBtn.addEventListener("click", function(){
 
-   
-createUserWithEmailAndPassword(auth, email.value, pswod.value)
+
+ const auth = getAuth(app);
+
+
+
+
+
+
+
+ var name=document.getElementById("name")
+    var sinBtn=document.getElementById("signupBtn")
+    
+sinBtn.addEventListener("click",function(e){
+   e.preventDefault();
+
+    var email=document.getElementById("email").value
+    var pswod=document.getElementById("pswod").value
+  
+createUserWithEmailAndPassword(auth, email,pswod)
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
+   alert("conform sigup.")
+    window.location.href = "log.html";
+     
     // ...
-                window.location.href = "index.html";
-
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
+    // alert("Firebase Error: " + errorMessage); 
     // ..
-  }); 
-console.log("working");
+    
+  });
+    console.log("hi");
 
 })
-
-loginBtn.addEventListener("click", function () {
-
-    signInWithEmailAndPassword(auth, email.value, pswod.value)
-        .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            console.log("successful signin", user)
-            // ...
-            window.location.href = "index.html";
-             
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log("errror in firebase login",error)
-                  
-
-        });
-        
-      })
-
-
-
